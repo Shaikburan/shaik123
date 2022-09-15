@@ -1,0 +1,50 @@
+#include<iostream>
+using namespace std;
+class person
+{
+	public:
+		int no,p,age;
+		char a[100];
+		void getdata()
+		{
+			cout<<"enter the regno";
+			cin>>no;
+		}
+};
+class account:public person
+{
+	public:
+		void getdata1()
+		{
+			cout<<"enter the pssword ";
+			cin>>p;
+		}
+};
+class admin:public person
+{
+	public:
+		void getdata2()
+		{
+			cout<<"enter the name ";
+			cin>>a;
+		}
+};
+class master:public person
+{
+	public:
+		void getdata3()
+		{
+			cout<<"enter the age ";
+			cin>>age;
+		} 
+};
+int main()
+{
+	account a;
+	a.getdata();
+	a.getdata1();
+	admin b;
+	b.getdata2();
+	master m;
+	m.getdata3();
+}
